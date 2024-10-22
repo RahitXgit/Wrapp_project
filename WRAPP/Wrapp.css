@@ -1,0 +1,361 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Styling for Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 20px; /* Increase padding to expand height */
+    height: 80px; /* Set a fixed height if needed */
+}
+
+nav .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    color: #f1c40f;
+}
+
+/* Styling for the Search Bar Container */
+.search-bar {
+    display: flex; /* Aligns the input and button in a row */
+    align-items: center; /* Vertically center the input and button */
+}
+
+/* Styling for the Search Input */
+.search-bar input {
+    padding: 10px 15px; /* Padding for input */
+    font-size: 16px; /* Font size */
+    border: none; /* Remove border */
+    border-radius: 30px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+    transition: width 0.4s ease, box-shadow 0.3s ease; /* Transition for width and shadow */
+    width: 200px; /* Initial width */
+}
+
+/* Change background color and scale on focus */
+.search-bar input:focus {
+    width: 300px; /* Expanded width on focus */
+    background-color: #f8f8f8; /* Change background on focus */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Deeper shadow on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Styling for the Search Button */
+.search-bar button {
+    padding: 10px 15px; /* Padding for button */
+    background-color: #d3d021; /* Button color */
+    border: none; /* No border */
+    border-radius: 30px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    color: white; /* Button text color */
+    font-size: 16px; /* Font size */
+    margin-left: 10px; /* Space between input and button */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition for effects */
+}
+
+/* Change background color and scale on hover */
+.search-bar button:hover {
+    background-color: #e5db24; /* Darker shade on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Optional: Add focus effect to button */
+.search-bar button:focus {
+    outline: none; /* Remove outline */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Add shadow effect */
+}
+
+/* Icons for Cart, Wishlist, and User */
+.icons a {
+    margin-left: 15px;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+}
+
+.icons a:hover {
+    color: #f1c40f;
+}
+
+
+
+/* Image Slider Styling */
+.slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Slider Image Container */
+.slides {
+    display: flex;
+    transition: 0.5s ease; /* Smooth slide transition */
+}
+
+/* Slider Image Width */
+.slides img {
+    width: 100%;
+}
+
+/* Shop by Category Section */
+#shop-by-category {
+    padding: 20px; /* Padding around the section */
+    background-color: #a9a4a4; /* Light gray background color */
+}
+
+/* Heading Style */
+#shop-by-category h2 {
+    text-align: center; /* Center align the heading */
+    margin-bottom: 20px; /* Margin below heading */
+    font-size: 28px; /* Font size for the heading */
+    color: #333; /* Dark color for the heading */
+}
+
+/* Shop by Category Section */
+#shop-by-category {
+    padding: 20px; /* Padding around the section */
+    background-color: #f9f9f9; /* Light gray background color */
+}
+
+/* Heading Style */
+#shop-by-category h2 {
+    text-align: center; /* Center align the heading */
+    margin-bottom: 20px; /* Margin below heading */
+    font-size: 24px; /* Font size for the heading */
+    color: #333; /* Dark color for the heading */
+}
+
+/* Container for Categories */
+.category-container {
+    display: flex; /* Use flexbox for horizontal layout */
+    flex-wrap: wrap; /* Allow wrapping to the next line */
+    justify-content: center; /* Center align items */
+    padding: 10px; /* Padding for the container */
+}
+
+/* Individual Category Card */
+.category-card {
+    flex: 0 0 auto; /* Prevent the card from shrinking */
+    margin: 10px; /* Margin between cards */
+    width: 100px; /* Set a suitable fixed width for cards */
+    height: 100px; /* Set a suitable fixed height for cards */
+    border-radius: 10px; /* Slightly rounded corners */
+    overflow: hidden; /* Ensure content fits within the card */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    text-decoration: none; /* Remove underline from links */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for effects */
+    display: flex; /* Use flexbox to center content */
+    flex-direction: column; /* Arrange image and text vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+}
+
+/* Image Style */
+.category-card img {
+    width: 100%; /* Full width image within the card */
+    height: 80%; /* Adjust height for the image */
+    object-fit: cover; /* Crop images to fit */
+}
+
+/* Category Text Style */
+.category-card h3 {
+    margin: 5px 0 0; /* Margin above and below the text */
+    font-size: 14px; /* Set font size for the text */
+    text-align: center; /* Center align the text */
+    color: #333; /* Dark color for the text */
+}
+
+/* Hover Effect for Category Card */
+.category-card:hover {
+    transform: scale(1.05); /* Slightly scale up the card */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
+
+
+/* Popular Brand Section */
+#popular-brands {
+    padding: 20px; /* Padding around the section */
+    background-color: #f9f9f9; /* Light gray background color */
+}
+
+/* Heading Style */
+#popular-brands h2 {
+    text-align: center; /* Center align the heading */
+    margin-bottom: 20px; /* Margin below heading */
+    font-size: 24px; /* Font size for the heading */
+    color: #333; /* Dark color for the heading */
+}
+
+/* Container for Brands */
+.brand-container {
+    display: flex; /* Use flexbox for horizontal layout */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    padding: 10px 0; /* Padding for the container */
+    scroll-behavior: smooth; /* Smooth scrolling effect */
+}
+
+/* Individual Brand Card */
+.brand-card {
+    flex: 0 0 auto; /* Prevent the card from shrinking */
+    margin: 0 10px; /* Margin between cards */
+    width: 100px; /* Fixed width for cards */
+    height: 100px; /* Fixed height for cards */
+    border-radius: 50%; /* Circular shape */
+    overflow: hidden; /* Ensure content fits within circle */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    display: flex; /* Centering the image */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for effects */
+}
+
+/* Image Style */
+.brand-card img {
+    width: 100%; /* Full width image */
+    height: 100%; /* Full height image */
+    object-fit: cover; /* Crop images to fit */
+    border-radius: 50%; /* Ensure the image is also circular */
+}
+
+/* Hover Effect for Brand Card */
+.brand-card:hover {
+    transform: scale(1.1); /* Slightly scale up the card */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
+/* Optional: Hide scrollbar for a cleaner look */
+.brand-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for webkit browsers */
+}
+
+.brand-container {
+    -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+
+/* Sale Banner Section Styling */
+.sale-banner {
+    position: relative;
+    text-align: center;
+}
+
+.sale-banner img {
+    width: 100%;
+}
+
+/* Sale Timer Styling */
+.sale-banner .timer {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Footer Section */
+#footer {
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text */
+    padding: 40px 20px; /* Padding for the footer */
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stack the sections vertically */
+    align-items: center; /* Center the content */
+}
+
+/* About Us Section */
+.about-us {
+    width: 80%; /* Make the width full within container */
+    max-width: 800px; /* Limit the width for larger screens */
+    margin-bottom: 30px; /* Space between sections */
+    text-align: center; /* Center align text */
+}
+
+.about-us h2 {
+    font-size: 22px; /* Font size for heading */
+    margin-bottom: 15px; /* Spacing below heading */
+    color: #f4a261; /* Accent color */
+}
+
+.about-us p {
+    font-size: 16px; /* Paragraph text size */
+    line-height: 1.5; /* Line spacing for readability */
+    color: #ccc; /* Lighter color for paragraph text */
+}
+
+/* Contact Us Section */
+.contact-us {
+    width: 80%; /* Make the width full within container */
+    max-width: 800px; /* Limit the width for larger screens */
+    text-align: center; /* Center align text */
+}
+
+.contact-us h2 {
+    font-size: 22px; /* Font size for heading */
+    margin-bottom: 15px; /* Spacing below heading */
+    color: #f4a261; /* Accent color */
+}
+
+.contact-us ul {
+    list-style: none; /* Remove default list style */
+    padding: 0; /* Remove padding */
+}
+
+.contact-us li {
+    font-size: 16px; /* Font size for list items */
+    margin-bottom: 10px; /* Spacing between list items */
+    display: flex; /* Flexbox layout for icon and text */
+    align-items: center; /* Align icon and text vertically */
+    justify-content: center; /* Center the text */
+    color: #ccc; /* Lighter color for text */
+}
+
+.contact-us li i {
+    font-size: 18px; /* Font size for icons */
+    margin-right: 10px; /* Spacing between icon and text */
+    color: #f4a261; /* Accent color for icons */
+}
+
+/* Contact Us Links */
+.contact-us a {
+    color: #f4a261; /* Link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition on hover */
+}
+
+.contact-us a:hover {
+    color: #e76f51; /* Change color on hover */
+}
+
+
+
