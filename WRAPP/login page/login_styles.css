@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Styling for Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(51, 51, 51, 0.8);
+    padding: 20px;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+nav .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+nav ul li a:hover {
+    color: #f1c40f;
+}
+
+/* Styling for the Search Bar Container */
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: width 0.4s ease, box-shadow 0.3s ease;
+    width: 200px;
+}
+
+.search-bar input:focus {
+    width: 300px;
+    background-color: #f8f8f8;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    outline: none;
+}
+
+.search-bar button {
+    padding: 10px 15px;
+    background-color: #d3d021;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #e5db24;
+    transform: translateY(-2px);
+}
+
+.search-bar button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Icons for Cart, Wishlist, and User */
+.icons a {
+    margin-left: 15px;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+}
+
+.icons a:hover {
+    color: #f1c40f;
+}
+
+.container {
+    background-color: white;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(4, 26, 27, 0.1);
+    border-radius: 10px;
+    width: 400px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #50baf8;
+}
+
+h2 {
+    text-align: left;
+    margin-bottom: 15px;
+    color: #50baf8;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: grey;
+}
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.tab {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    background-color: #e0e0e0;
+    cursor: pointer;
+    border-radius: 100px;
+    transition: background-color 0.3s;
+}
+
+.tab.active {
+    background-color: #f8a0d6;
+    color: white;
+    border: none;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+input {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.btn {
+    padding: 10px;
+    background-color:  #50baf8;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #236377;
+}
+
+.switch-text {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.switch-text span {
+    color: #007bff;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wrapp - Login or Sign Up</title>
+    <link rel="stylesheet" href="login_styles.css">
+</head>
+
+ <!-- Navigation Bar Section -->
+ <nav>
+    <!-- Website Name/Logo -->
+    <div class="logo">Wrapp.</div>
+    
+    <!-- Navigation Links -->
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">Kids</a></li>
+    </ul>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" placeholder="Search...">
+        <button>Search</button>
+    </div>
+    
+    <!-- Icons for Cart, Wishlist, and User Profile using Font Awesome -->
+    <div class="icons">
+        <a href="#"><i class="fa-brands fa-opencart"></i></a>  <!-- Cart Icon -->
+        <a href="#"><i class="fa-brands fa-gratipay"></i></a>          <!-- Wishlist Icon -->
+        <a href="#"><i class="fa-solid fa-image-portrait"></i></a>           <!-- User Icon -->
+    </div>
+</nav>
+    
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Welcome to Wrapp.</h1>
+            <div class="tabs">
+                <button id="login-tab" class="tab active">Login</button>
+                <button id="signup-tab" class="tab">Sign Up</button>
+            </div>
+            <form id="login-form" class="form">
+                <h2>Login</h2>
+                <input type="email" id="login-email" placeholder="Email" required>
+                <input type="password" id="login-password" placeholder="Password" required>
+                <h3>Or</h3>
+                <input type="phone no" id="login-phone no" placeholder="Phone No" required>
+                <button type="submit" class="btn">Login</button>
+                <p class="switch-text">Don't have an account? <span id="switch-to-signup">Sign Up</span></p>
+            </form>
+            <form id="signup-form" class="form hidden">
+                <h2>Sign Up</h2>
+                <input type="text" id="signup-name" placeholder="Name" required>
+                <input type="email" id="signup-email" placeholder="Email" required>
+                <input type="password" id="signup-password" placeholder="Password" required>
+                <button type="submit" class="btn">Sign Up</button>
+                <p class="switch-text">Already have an account? <span id="switch-to-login">Login</span></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="login_script.js"></script>
+</body>
+</html>
