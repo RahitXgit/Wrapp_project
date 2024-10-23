@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Wear</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menswear.html">Men</a></li>
+            <li><a href="womenswear.html">Women</a></li>
+            <li><a href="kidswear.html">Kids</a></li>
+            <li><a href="#">Cart</a></li>
+        </ul>
+    </nav>
+
+    <!-- Men’s Wear Section -->
+    <section class="mens-wear">
+        <div class="container">
+            <!-- Sort By Section -->
+            <div class="sort-filter">
+                <label for="sort-by">Sort by:</label>
+                <select id="sort-by">
+                    <option value="popular">Popular</option>
+                    <option value="low-to-high">Price: Low to High</option>
+                    <option value="high-to-low">Price: High to Low</option>
+                    <option value="new-arrival">New Arrival</option>
+                </select>
+            </div>
+
+            <!-- Filter Section -->
+            <div class="filter-section">
+                <h3>Filters</h3>
+                <form id="filter-form">
+                    <!-- Filter by Price -->
+                    <div class="filter-group">
+                        <h4>Price</h4>
+                        <input type="range" min="0" max="1000" step="50" id="price-range">
+                        <p>Max Price: $<span id="price-value">1000</span></p>
+                    </div>
+
+                    <!-- Filter by Brand -->
+                    <div class="filter-group">
+                        <h4>Brand</h4>
+                        <label><input type="checkbox" name="brand" value="Nike"> Nike</label>
+                        <label><input type="checkbox" name="brand" value="Adidas"> Adidas</label>
+                        <label><input type="checkbox" name="brand" value="Puma"> Puma</label>
+                        <label><input type="checkbox" name="brand" value="Reebok"> Reebok</label>
+                    </div>
+
+                    <!-- Filter by Size -->
+                    <div class="filter-group">
+                        <h4>Size</h4>
+                        <label><input type="checkbox" name="size" value="S"> S</label>
+                        <label><input type="checkbox" name="size" value="M"> M</label>
+                        <label><input type="checkbox" name="size" value="L"> L</label>
+                        <label><input type="checkbox" name="size" value="XL"> XL</label>
+                    </div>
+
+                    <!-- Filter by Discount -->
+                    <div class="filter-group">
+                        <h4>Discount</h4>
+                        <label><input type="checkbox" name="discount" value="10"> 10% Off</label>
+                        <label><input type="checkbox" name="discount" value="20"> 20% Off</label>
+                        <label><input type="checkbox" name="discount" value="30"> 30% Off</label>
+                        <label><input type="checkbox" name="discount" value="50"> 50% Off</label>
+                    </div>
+
+                    <!-- Filter by Rating -->
+                    <div class="filter-group">
+                        <h4>Rating</h4>
+                        <label><input type="checkbox" name="rating" value="4"> 4+ Stars</label>
+                        <label><input type="checkbox" name="rating" value="3"> 3+ Stars</label>
+                        <label><input type="checkbox" name="rating" value="2"> 2+ Stars</label>
+                    </div>
+
+                    <!-- Filter by Color -->
+                    <div class="filter-group">
+                        <h4>Color</h4>
+                        <label><input type="checkbox" name="color" value="red"> Red</label>
+                        <label><input type="checkbox" name="color" value="blue"> Blue</label>
+                        <label><input type="checkbox" name="color" value="black"> Black</label>
+                        <label><input type="checkbox" name="color" value="white"> White</label>
+                    </div>
+
+                    <!-- Filter by Pattern -->
+                    <div class="filter-group">
+                        <h4>Pattern</h4>
+                        <label><input type="checkbox" name="pattern" value="solid"> Solid</label>
+                        <label><input type="checkbox" name="pattern" value="striped"> Striped</label>
+                        <label><input type="checkbox" name="pattern" value="printed"> Printed</label>
+                    </div>
+
+                    <!-- Filter by Material -->
+                    <div class="filter-group">
+                        <h4>Material</h4>
+                        <label><input type="checkbox" name="material" value="cotton"> Cotton</label>
+                        <label><input type="checkbox" name="material" value="polyester"> Polyester</label>
+                        <label><input type="checkbox" name="material" value="linen"> Linen</label>
+                    </div>
+
+                    <!-- Filter by Sleeves -->
+                    <div class="filter-group">
+                        <h4>Sleeves</h4>
+                        <label><input type="checkbox" name="sleeves" value="short"> Short Sleeves</label>
+                        <label><input type="checkbox" name="sleeves" value="long"> Long Sleeves</label>
+                    </div>
+
+                    <!-- Submit Filters Button -->
+                    <button type="submit" class="apply-filters">Apply Filters</button>
+                </form>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid">
+                <!-- Add your product cards here -->
+                <div class="product-card">
+                    <img src="images/product1.jpg" alt="Product 1">
+                    <h4>Product 1</h4>
+                    <p>$99</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/product2.jpg" alt="Product 2">
+                    <h4>Product 2</h4>
+                    <p>$199</p>
+                </div>
+                <!-- Add more products as needed -->
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>

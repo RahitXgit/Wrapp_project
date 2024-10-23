@@ -1,0 +1,112 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.mens-wear .container {
+    padding: 20px;
+}
+
+.sort-filter {
+    margin-bottom: 20px;
+}
+
+.sort-filter select {
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Filter Section */
+.filter-section {
+    width: 25%;
+    float: left;
+    background-color: #fff;
+    padding: 20px;
+    margin-right: 20px;
+    border: 1px solid #ddd;
+}
+
+.filter-section h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.filter-group h4 {
+    margin-top: 20px;
+}
+
+.filter-group label {
+    display: block;
+    margin: 5px 0;
+}
+
+/* Products Grid */
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product-card {
+    width: 22%;
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+}
+
+.product-card h4 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .filter-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .products-grid {
+        justify-content: center;
+    }
+
+    .product-card {
+        width: 100%;
+    }
+}
