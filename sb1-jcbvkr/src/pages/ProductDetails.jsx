@@ -1,9 +1,9 @@
-// import React from 'react';
-// import { useParams } from 'react-router-dom';
-// import { ShoppingCart, Heart } from 'lucide-react';
-// import { useCart } from '../context/CartContext';
-// import { useWishlist } from '../context/WishlistContext';
-// import { products } from './Shop';  // Import the products array
+import React from 'react';
+import { useParams } from 'react-router-dom';
+import { ShoppingCart, Heart } from 'lucide-react';
+import { useCart } from '../context/CartContext';
+import { useWishlist } from '../context/WishlistContext';
+import { products } from './Shop';  // Import the products array
 
 // // Mock product data (in a real app, this would come from an API)
 // // const product = {
