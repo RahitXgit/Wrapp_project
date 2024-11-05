@@ -51,10 +51,53 @@ export const products = [
     name: "Stripes Asics",
     price: 180,
     image: "https://images.unsplash.com/photo-1575456456278-936c89ccdb7b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    category: "both",
+    category: "women",
     sizes: ['S', 'M', 'L', 'XL'],
     colors: ['White', 'Black', 'Gray'],
     description: "A comfortable and stylish t-shirt made from 100% cotton."
+  }
+  ,
+  {
+    id: 6,
+    name: "Luxury Perfume",
+    price: 89.99,
+    image: "https://images.unsplash.com/photo-1681935703733-5e9df028a318?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "women",
+    sizes: ['50ml', '100ml'],
+    colors: ['Gold', 'Silver'],
+    description: "An elegant fragrance with sophisticated notes for a lasting impression."
+  }
+  ,
+  {
+    id: 7,
+    name: "Classic Chanel Perfume",
+    price: 129.99,
+    image: "https://images.unsplash.com/photo-1506915925765-ed31516b9080?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "women",
+    sizes: ['50ml', '100ml'],
+    colors: ['Gold'],
+    description: "A timeless and sophisticated fragrance that embodies luxury and elegance."
+  }
+  ,
+  {
+    id: 8,
+    name: "Luxury Men's Cologne",
+    price: 149.99,
+    image: "https://images.unsplash.com/photo-1611242956059-53e4c29e6b22?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG1lbiUyMHBlcmZ1bWVzfGVufDB8fDB8fHww",
+    category: "men",
+    sizes: ['50ml', '100ml'],
+    colors: ['Black', 'Silver'],
+    description: "A sophisticated men's fragrance with woody and spicy notes."
+  },
+  {
+    id: 9,
+    name: "Leopard Print Dress",
+    price: 79.99,
+    image: "https://images.unsplash.com/photo-1536766820879-059fec98ec0a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "men",
+    sizes: ['S', 'M', 'L', 'XL'],
+    colors: ['White'],
+    description: "A timeless white dress shirt perfect for formal occasions."
   }
   // Add more mock products as needed
 ];
