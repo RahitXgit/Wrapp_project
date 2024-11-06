@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { ShoppingCart, Heart, User } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
-const buttonStyle = {
+const navItemStyle = {
   background: 'none',
   border: 'none',
   cursor: 'pointer',
@@ -9,14 +10,9 @@ const buttonStyle = {
   alignItems: 'center',
   padding: '0.5rem',
   color: 'inherit',
-};
-
-const iconLinkStyle = {
-  color: 'inherit',
+  fontSize: '1rem',
+  fontWeight: '500',
   textDecoration: 'none',
-  position: 'relative',
-  display: 'flex',
-  alignItems: 'center',
 };
 
 const badgeStyle = {
@@ -33,37 +29,11 @@ const badgeStyle = {
 };
 
 export default function Navbar({ cart = [], user = null, logout = () => {} }) {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-
-  const renderNavItems = (isMobile = false) => (
-    <>
-      <a href="/shop" style={iconLinkStyle}>
-        Shop
-      </a>
-      <a href="/cart" style={iconLinkStyle}>
-        <ShoppingCart size={24} />
-        {cart.length > 0 && (
-          <span style={badgeStyle}>
-            {cart.length}
-          </span>
-        )}
-      </a>
-      <a href="/wishlist" style={iconLinkStyle}>
-        <Heart size={24} />
-      </a>
-      {user ? (
-        <button onClick={logout} style={buttonStyle}>
-          {isMobile ? 'Logout' : <User size={24} />}
-        </button>
-      ) : (
-        <a href="/login" style={iconLinkStyle}>
-          <User size={24} />
-        </a>
-      )}
-    </>
-  );
+  const handleCategoryClick = (category) => {
+    navigate(`/shop?category=${category}`);
+  };
 
   return (
     <>
@@ -81,52 +51,54 @@ export default function Navbar({ cart = [], user = null, logout = () => {} }) {
           maxWidth: '1280px',
           margin: '0 auto',
           padding: '0 1rem',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          height: '4rem',
         }}>
-          <div style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            height: '4rem',
-          }}>
-            <a href="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', color: 'inherit' }}>
-              <span style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>Wrapp.</span>
+          {/* Logo and Categories */}
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <a href="/" style={{ ...navItemStyle, fontSize: '1.5rem', fontWeight: 'bold', marginRight: '2rem' }}>
+              Wrapp.
             </a>
-
-            {/* Desktop Navigation */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
-              {renderNavItems()}
-            </div>
-
-            {/* Mobile menu button */}
-            <button
-              style={{ ...buttonStyle, display: 'none', '@media (max-width: 768px)': { display: 'flex' } }}
-              onClick={toggleMenu}
-              aria-label="Toggle menu"
-            >
-              {isMenuOpen ? (
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="18" y1="6" x2="6" y2="18"></line>
-                  <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-              ) : (
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="3" y1="12" x2="21" y2="12"></line>
-                  <line x1="3" y1="6" x2="21" y2="6"></line>
-                  <line x1="3" y1="18" x2="21" y2="18"></line>
-                </svg>
-              )}
+            <button onClick={() => handleCategoryClick('men')} style={navItemStyle}>
+              Men
+            </button>
+            <button onClick={() => handleCategoryClick('women')} style={navItemStyle}>
+              Women
+            </button>
+            <button onClick={() => handleCategoryClick('kids')} style={navItemStyle}>
+              Kids
             </button>
           </div>
-        </div>
 
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div style={{ '@media (min-width: 768px)': { display: 'none' } }}>
-            <div style={{ padding: '0.5rem 1rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-              {renderNavItems(true)}
-            </div>
+          {/* Navigation Items */}
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            {/* <a href="/shop" style={navItemStyle}>
+              Shop
+            </a> */}
+            <a href="/cart" style={{ ...navItemStyle, position: 'relative' }}>
+              <ShoppingCart size={24} />
+              {cart.length > 0 && (
+                <span style={badgeStyle}>
+                  {cart.length}
+                </span>
+              )}
+            </a>
+            <a href="/wishlist" style={navItemStyle}>
+              <Heart size={24} />
+            </a>
+            {user ? (
+              <button onClick={logout} style={navItemStyle}>
+                <User size={24} />
+              </button>
+            ) : (
+              <a href="/login" style={navItemStyle}>
+                <User size={24} />
+              </a>
+            )}
           </div>
-        )}
+        </div>
       </nav>
       <div style={{ height: '4rem' }} /> {/* Spacer to prevent content from being hidden behind the navbar */}
     </>

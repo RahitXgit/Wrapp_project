@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useCart } from '../context/CartContext';
 import { useWishlist } from '../context/WishlistContext';
 import { Heart, ShoppingCart } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 
 // At the top of Shop.jsx, make products available for import
 export const products = [
@@ -123,13 +123,30 @@ export const products = [
 ];
 
 function Shop() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [selectedCategory, setSelectedCategory] = useState(searchParams.get('category') || 'all');
   const { addToCart } = useCart();
   const { wishlist, addToWishlist, removeFromWishlist } = useWishlist();
 
-  const filteredProducts = selectedCategory === 'all'
-    ? products
+  // Update category when URL changes
+  useEffect(() => {
+    const category = searchParams.get('category');
+    setSelectedCategory(category || 'all');
+  }, [searchParams]);
+
+  const filteredProducts = selectedCategory === 'all' 
+    ? products 
     : products.filter(product => product.category === selectedCategory);
+
+  const handleCategoryChange = (newValue) => {
+    setSelectedCategory(newValue);
+    // Use setSearchParams instead of manual URL manipulation
+    if (newValue === 'all') {
+      setSearchParams({});
+    } else {
+      setSearchParams({ category: newValue });
+    }
+  };
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -137,7 +154,7 @@ function Shop() {
         <h1 className="text-3xl font-bold">Shop</h1>
         <select
           value={selectedCategory}
-          onChange={(e) => setSelectedCategory(e.target.value)}
+          onChange={(e) => handleCategoryChange(e.target.value)}
           className="border rounded-md px-4 py-2"
         >
           <option value="all">All Categories</option>
