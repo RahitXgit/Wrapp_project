@@ -98,6 +98,26 @@ export const products = [
     sizes: ['S', 'M', 'L', 'XL'],
     colors: ['White'],
     description: "A timeless white dress shirt perfect for formal occasions."
+  },
+  {
+    id: 10,
+    name: "Maroon Kids Dress",
+    price: 9.99,
+    image: "https://images.meesho.com/images/products/364720956/0pf1y_1200.jpg",
+    category: "kids",
+    sizes: ['S', 'M', 'L', 'XL'],
+    colors: ['Maroon'],
+    description: "A comfortable and stylish t-shirt made from 100% cotton."
+  },
+  {
+    id: 11,
+    name: "Printed Kids T-Shirt",
+    price: 19.99,
+    image: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQfA8eZWirP9UQlLtjbHhz0XnBc2jhoR82A9rmfeZS5s2vHfpNI6MvrjLG0ZV003nMBcgcNaWltOlJdPTU1lFDagpG5c1HVruI047SEuQM2LRMDTH35GYoON-Y",
+    category: "kids",
+    sizes: ['S', 'M', 'L', 'XL'],
+    colors:['Yellow', 'Blue', 'Red'],
+    description: "cats printed t-shirt for kids"
   }
   // Add more mock products as needed
 ];
