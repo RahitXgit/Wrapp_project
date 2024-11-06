@@ -36,12 +36,12 @@ function Home() {
           />
           <CategoryCard
             title="Women's Collection"
-            image="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+            image="https://plus.unsplash.com/premium_photo-1699973056178-361be00b6e95?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTd8fHdvbWVuJTIwYnV5aW5nJTIwY2xvdGhlc3xlbnwwfDF8MHx8fDA%3D"
             link="/shop?category=women"
           />
           <CategoryCard
             title="Kids Collection"
-            image="https://images.unsplash.com/photo-1519457431-44ccd64a579b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+            image="https://images.unsplash.com/photo-1665060222802-a44d2826ba34?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGtpZHMlMjBzaG9wcGluZ3xlbnwwfDF8MHx8fDA%3D"
             link="/shop?category=kids"
           />
         </div>
