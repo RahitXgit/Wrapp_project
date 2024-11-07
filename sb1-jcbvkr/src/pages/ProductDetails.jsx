@@ -70,7 +70,7 @@ function ProductDetails() {
 
         <div className="space-y-6">
           <h1 className="text-3xl font-bold">{product.name}</h1>
-          <p className="text-2xl font-semibold">${product.price}</p>
+          <p className="text-2xl font-semibold">₹{product.price}</p>
           <p className="text-gray-600">{product.description}</p>
 
           <div>

@@ -125,7 +125,7 @@ function FeaturedProduct({ name, price, image, id }) {
         <img src={image} alt={name} className="w-full h-80 object-cover" />
         <div className="p-4">
           <h3 className="text-lg font-semibold">{name}</h3>
-          <p className="text-gray-600">${price}</p>
+          <p className="text-gray-600">₹{price}</p>
         </div>
       </Link>
     </div>

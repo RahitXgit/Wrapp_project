@@ -74,9 +74,6 @@ export default function Navbar({ cart = [], user = null, logout = () => {} }) {
 
           {/* Navigation Items */}
           <div style={{ display: 'flex', alignItems: 'center' }}>
-            {/* <a href="/shop" style={navItemStyle}>
-              Shop
-            </a> */}
             <a href="/cart" style={{ ...navItemStyle, position: 'relative' }}>
               <ShoppingCart size={24} />
               {cart.length > 0 && (
