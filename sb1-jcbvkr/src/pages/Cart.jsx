@@ -1,10 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Trash2, Plus, Minus } from 'lucide-react';
 import { useCart } from '../context/CartContext';
+import toast from 'react-hot-toast';
 
 function Cart() {
   const { cart, removeFromCart, updateQuantity, getCartTotal } = useCart();
+  const navigate = useNavigate();
+
+  const handleProceedToCheckout = () => {
+    navigate('/checkout');
+  };
 
   if (cart.length === 0) {
     return (
@@ -35,7 +41,7 @@ function Cart() {
               />
               <div className="ml-4 flex-1">
                 <h3 className="text-lg font-semibold">{item.name}</h3>
-                <p className="text-gray-600">${item.price}</p>
+                <p className="text-gray-600">₹{item.price}</p>
                 <div className="flex items-center mt-2">
                   <button
                     onClick={() => updateQuantity(item.id, Math.max(1, item.quantity - 1))}
@@ -68,7 +74,7 @@ function Cart() {
             <div className="space-y-2">
               <div className="flex justify-between">
                 <span>Subtotal</span>
-                <span>${getCartTotal().toFixed(2)}</span>
+                <span>₹{getCartTotal().toFixed(2)}</span>
               </div>
               <div className="flex justify-between">
                 <span>Shipping</span>
@@ -77,11 +83,14 @@ function Cart() {
               <div className="border-t pt-2 mt-2">
                 <div className="flex justify-between font-semibold">
                   <span>Total</span>
-                  <span>${getCartTotal().toFixed(2)}</span>
+                  <span>₹{getCartTotal().toFixed(2)}</span>
                 </div>
               </div>
             </div>
-            <button className="w-full mt-6 px-6 py-3 bg-indigo-600 text-white rounded-md hover:bg-indigo-700">
+            <button
+              onClick={handleProceedToCheckout}
+              className="w-full mt-6 px-6 py-3 bg-indigo-600 text-white rounded-md hover:bg-indigo-700"
+            >
               Proceed to Checkout
             </button>
           </div>
