@@ -152,6 +152,94 @@ export const products = [
     colors:['Orange', 'Peach'],
     description: "Ethnic plain orange kurta"
   }, 
+  {
+    id: 14,
+    name: "White Sports Shirt & Jogger Set",
+    price: 289.99,
+    image: "https://images.pexels.com/photos/15868727/pexels-photo-15868727/free-photo-of-model-in-white-sportswear.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    category: "men",
+    subcategory: "Jogger",
+    sizes: ['S', 'M', 'L', 'XL'],
+    colors:['Yellow', 'Blue', 'Red'],
+    description: "Sports t-shirt and jogger for mens"
+  },
+  {
+    id: 15,
+    name: "Woman Orange Hoodie Sweater and Jogger Pants ",
+    price: 389.99,
+    image: "https://images.pexels.com/photos/13769337/pexels-photo-13769337.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    category: "women",
+    subcategory: "hoodie and jogger set",
+    sizes: ['S', 'M', 'L', 'XL'],
+    colors:['Yellow', 'Blue', 'Red'],
+    description: "Hoodie Sewater and jogger pant for womens"
+  },
+  {
+    id: 16,
+    name: "Black Leather Full-zip Jacket",
+    price: 599.99,
+    image: "https://images.pexels.com/photos/983497/pexels-photo-983497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    category: "men",
+    subcategory: "Jacket",
+    sizes: ['S', 'M', 'L', 'XL'],
+    //colors:['Yellow', 'Blue', 'Red'],
+    description: "Man in Black Leather Full-zip Jacket"
+  },
+  {
+    id: 17,
+    name: "Women's Beige Peep-toe Heeled Sandals ",
+    price: 499.99,
+    image: "https://images.pexels.com/photos/137603/pexels-photo-137603.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    category: "women",
+    subcategory: "Sandals",
+    sizes: ['S', 'M', 'L', 'XL'],
+    colors:['Yellow', 'Blue', 'Red'],
+    description: "Pair of Women's Beige Peep-toe Heeled Sandals "
+  },
+  {
+    id: 18,
+    name: "Women White Sports Shoe ",
+    price: 499.99,
+    image: "https://images.pexels.com/photos/26088459/pexels-photo-26088459/free-photo-of-close-up-of-a-woman-tying-her-shoe.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    category: "women",
+    subcategory: "Sports Shoe",
+    sizes: ['S', 'M', 'L', 'XL'],
+    colors:['Yellow', 'Blue', 'Red'],
+    description: "Pair of Women's white sports shoe "
+  },
+  {
+    id: 19,
+    name: "Men's kurta ",
+    price: 399.99,
+    image: "https://images.pexels.com/photos/8217728/pexels-photo-8217728.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    category: "men",
+    subcategory: "ethnic wear",
+    sizes: ['S', 'M', 'L', 'XL'],
+    colors:['Yellow', 'Blue', 'Red'],
+    description: "Kurta in minimalistic design "
+  },
+  {
+    id: 20,
+    name: "Men's formal shirt ",
+    price: 399.99,
+    image: "https://images.unsplash.com/photo-1603252109612-24fa03d145c8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D",
+    category: "men",
+    subcategory: "Formal Shirt",
+    sizes: ['S', 'M', 'L', 'XL'],
+    colors:['Black', 'Blue', 'Grey'],
+    description: " formal shirt for men "
+  },
+  {
+    id: 21,
+    name: "Men's Leather Jacket ",
+    price: 599.99,
+    image: "https://images.pexels.com/photos/20232807/pexels-photo-20232807/free-photo-of-model-in-a-brown-leather-jacket-and-gray-sweater-posing-on-a-footbridge.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    category: "men",
+    subcategory: "Jacket",
+    sizes: ['S', 'M', 'L', 'XL'],
+    colors:['Black', 'Blue', 'Grey'],
+    description: " Browen Jacket for men "
+  },
   // Add more mock products as needed
 ];
 
